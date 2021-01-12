@@ -1,0 +1,37 @@
+{% load i18n %}
+
+<style>
+    .language-changer{
+        margin: 20px auto;
+        text-align: center;
+    }
+    #languageSelect{
+        width: 200px;
+        font-size: 14px;
+        font-weight: bold;
+    }
+    .country-names{
+        margin: 20px auto;
+        height: 100px;
+    }
+</style>
+
+<div class="language-changer">
+    <form id="lang_changer" action="{% url 'set_language' %}" method="post">{% csrf_token %}
+        <input name="next" type="hidden" value="{{ redirect_to }}" />
+        <label for="languageSelect">Select Language </label><select id = "languageSelect" name="language" onchange="this.form.submit();">
+            {% get_current_language as LANGUAGE_CODE %}
+            {% get_available_languages as LANGUAGES %}
+            {% for lang in LANGUAGES %}
+            <option value="{{ lang.0 }}" {% if lang.0 == LANGUAGE_CODE %} selected="selected"{% endif %}>
+                {{ lang.1 }}
+            </option>
+            {% endfor %}
+        </select>
+    </form>
+    <div class="country-names">
+        {% for country in countries %}
+            <p>{{ forloop.counter }}. {{ country.name }}</p>
+        {% endfor %}
+    </div>
+</div>

@@ -1,0 +1,17 @@
+# Default ignored files
+/shelf/
+/.idea/workspace.xml
+# Datasource local storage ignored files
+/.idea/dataSources/
+/.idea/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+/countries/__pycache__/
+/countries/migrations/__pycache__/
+/model_field_translation/__pycache__/
+
+/.idea/
+/media/
