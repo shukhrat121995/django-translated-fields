@@ -4,6 +4,7 @@ Simple Usage of django-translated-fields in a small django project
 ## Getting Started
 Create a virtual environment 
 ```bash
+$ pip install pipenv
 $ pipenv install
 $ pipenv sync
 $ python manage.py migrate
@@ -18,6 +19,3 @@ Then you can login to admin site and then you can add, modify and delete countri
 ![Capture3](https://user-images.githubusercontent.com/41660866/104310128-0440ac00-54f5-11eb-9ab3-ce2e84f5773d.JPG)
 ![Capture4](https://user-images.githubusercontent.com/41660866/104310134-06a30600-54f5-11eb-8e95-b2901b1fc93e.JPG)
 
-## Contributing
-
-I love contributions, so please feel free to fix bugs, improve things, provide documentation. Just send a pull request.
